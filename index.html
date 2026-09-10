@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260910-05-2120d8a","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/c21197326e9a1154.telemetry_sdk.js" integrity="sha512-Aqwl+NmLtKBcMQM4HY+W9lmBHa+zP5MqSEuYfCjkzt4xeOSv2xNz81cCp7JyXBVrY+zojg5o94FHY/R31v2d3Q=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Duel</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/efe904fe8a212716.data_sdk.js" integrity="sha512-oiO0pmn5llS1uDeB2l690YywxqOe/a0U1kzY6RGaLZXtyh9YjTk1CUoK/bJUugc1QbUaJMJ3IE1MtpNY5NBZCw=="></script>
+  <script src="/_sdk/19fb35948abd980a.editing_sdk.js" integrity="sha512-DDNgw76Zd1mcogJdZu1Q08t7qq/ye0UrrxgjUx+RsorIA6PWkg9ctny4b4xj5in/fJp6WW7KcBtlnAKmQM6bgQ=="></script>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #25211f;
+      --paper: #fffaf4;
+      --coral: #e85d4a;
+      --coral-dark: #bd4435;
+      --lavender: #e8ddfb;
+      --line: #e7ded5;
+      --muted: #706963;
+      --mist: #f5f0eb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Work Sans", sans-serif; color: var(--ink); }
+    .app-shell { width: 100%; min-height: calc(100 * min(var(--vh, 1vh), 1vh)); overflow-x: hidden; }
+    .grain {
+      background-image: radial-gradient(rgba(37,33,31,.055) 1px, transparent 1px);
+      background-size: 17px 17px;
+    }
+    .nav-link { border-bottom: 2px solid transparent; color: var(--muted); transition: .2s ease; }
+    .nav-link.active { color: var(--ink); border-color: var(--coral); }
+    .view-panel { animation: rise .3s ease both; }
+    .logo-stage {
+      position: relative; display: grid; place-items: center; min-height: 215px; overflow: hidden;
+      border-radius: 1.45rem; isolation: isolate;
+    }
+    .logo-stage::before {
+      content: ""; position: absolute; width: 196px; height: 196px; border: 1px solid currentColor;
+      border-radius: 50%; opacity: .17; transform: rotate(-14deg);
+    }
+    .logo-stage::after {
+      content: ""; position: absolute; width: 130px; height: 130px; border: 1px solid currentColor;
+      border-radius: 1.75rem; opacity: .10; transform: rotate(28deg);
+    }
+    .logo-mark {
+      position: relative; z-index: 1; max-width: 82%; text-align: center; font-size: clamp(3rem, 9vw, 6.5rem);
+      font-weight: 800; letter-spacing: -.11em; line-height: .85; overflow-wrap: anywhere;
+    }
+    .brand-mark { width: 2.75rem; height: 2.75rem; object-fit: contain; border-radius: .75rem; mix-blend-mode: multiply; flex: 0 0 auto; }
+    .match-card { min-width: 0; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+    #logo-a-name, #logo-b-name, #logo-a-version, #logo-b-version { overflow-wrap: anywhere; }
+    @media (max-width: 480px) {
+      header { padding-inline: 1rem; }
+      header > div { align-items: flex-start; }
+      header nav { gap: .65rem; }
+      header nav button { min-height: 2.75rem; }
+      .brand-mark { width: 2.5rem; height: 2.5rem; }
+    }
+    .match-card:hover { transform: translateY(-3px); box-shadow: 0 22px 42px rgba(53,37,27,.12); }
+    .match-card.is-selected { border-color: var(--coral); box-shadow: 0 18px 40px rgba(232,93,74,.22); }
+    .match-card.is-dimmed { opacity: .48; transform: scale(.985); }
+    .result-bar { transition: width .55s cubic-bezier(.2,.75,.25,1); }
+    .toast { animation: toast .35s ease both; }
+    .owner-item { transition: transform .18s ease, box-shadow .18s ease; }
+    .owner-item:hover { transform: translateY(-2px); box-shadow: 0 13px 28px rgba(53,37,27,.09); }
+    @keyframes rise { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes toast { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 767px) {
+      .versus { transform: rotate(90deg); }
+      .logo-stage { min-height: 180px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+  <script src="/_sdk/6125e8aa3c264a2d.resizing_sdk.js" type="text/javascript" integrity="sha512-+j9iK2FF/yFSTU389rFqKj3v0s1ELh1r0aj3mqpsVRZujaeWi0WgN7jmTcWLcBq91dz3NCEyXqMtHbwpOxhDYg=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(255, 250, 244);">
+  <div class="app-shell grain">
+   <header data-template-id="site-header" class="canva-header border-b px-5 py-4 sm:px-8" style="background:#fffaf4;border-color:#e7ded5;">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4">
+     <button type="button" class="flex items-center gap-3 rounded-xl text-left focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" onclick="showView('vote')"> <img data-template-id="logo-duel-brand-mark" class="canva-image brand-mark" loading="eager" src="./Logo_Duel_logo.jpeg" alt="Logo Duel logo"> <span> <span data-template-id="wordmark" class="canva-text block font-extrabold tracking-tight" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 20px;">Logo Duel</span> <span data-template-id="tagline" class="canva-text block text-xs text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 12px;">A focused logo vote</span> </span> </button>
+     <nav aria-label="Primary navigation" class="flex flex-wrap justify-end gap-3 sm:gap-5">
+      <button id="vote-nav" data-template-id="vote-nav-label" class="canva-button nav-link active rounded py-2 text-sm font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" onclick="showView('vote')" style="color: rgb(37, 33, 31); font-weight: 600; font-style: normal; font-size: 16px;">Vote</button> <button id="owner-nav" data-template-id="owner-nav-label" class="canva-button nav-link rounded py-2 text-sm font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" onclick="showView('owner')" style="color: rgb(112, 105, 99); font-weight: 600; font-style: normal; font-size: 16px;">Owner access</button> <button id="results-nav" data-template-id="results-nav-label" class="canva-button nav-link rounded py-2 text-sm font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" onclick="showView('results')" style="color: rgb(112, 105, 99); font-weight: 600; font-style: normal; font-size: 16px;">Owner results</button>
+     </nav>
+    </div>
+   </header>
+   <main class="mx-auto w-full max-w-6xl px-5 py-8 sm:px-8 sm:py-12">
+    <section id="vote-view" class="view-panel" aria-labelledby="vote-title">
+     <div class="mb-7 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+      <div>
+       <p data-template-id="vote-eyebrow" class="canva-text mb-3 text-sm font-bold uppercase tracking-[.14em]" style="color: rgb(232, 93, 74); font-weight: 700; font-style: normal; font-size: 13px; letter-spacing: 0.08rem;">Anonymous logo feedback</p>
+       <h1 id="vote-title" data-template-id="vote-title-text" class="canva-text font-extrabold tracking-tight" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 32px;">Which logo works best?</h1>
+       <p data-template-id="vote-copy" class="canva-text mt-3 max-w-2xl leading-7 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">Choose the concept that feels clearer and more memorable.</p>
+      </div>
+      <div class="min-w-[205px] rounded-2xl border border-[#e7ded5] bg-white px-4 py-3 shadow-sm">
+       <div class="flex justify-between gap-4 text-xs font-bold uppercase tracking-[.1em] text-[#706963]">
+        <span data-template-id="progress-label" class="canva-text" style="color: rgb(112, 105, 99); font-weight: 700; font-style: normal; font-size: 12px;">Your progress</span> <span id="progress-text" aria-live="polite">Comparison 1 of 12</span>
+       </div>
+       <div class="mt-2 h-2 overflow-hidden rounded-full bg-[#efe8e0]">
+        <div id="progress-fill" class="result-bar h-full rounded-full bg-[#e85d4a]" style="width:0%"></div>
+       </div>
+      </div>
+     </div>
+     <div data-template-id="privacy-note" class="canva-banner mb-6 rounded-2xl px-5 py-4" style="background: rgb(232, 221, 251);">
+      <p data-template-id="privacy-note-text" class="canva-text leading-6" style="color: rgb(37, 33, 31); font-weight: 600; font-style: normal; font-size: 16px; line-height: 1.5;">Only the test owner can add or change logo concepts. Vote anonymously and only participate if you agree to provide feedback.</p>
+     </div>
+     <div id="vote-notice" class="toast mb-5 hidden rounded-2xl border border-[#d7caec] bg-[#f4effd] px-5 py-4" aria-live="polite">
+      <p id="vote-notice-text" class="font-semibold"></p>
+     </div>
+     <div id="vote-loading" class="rounded-[2rem] border border-[#e7ded5] bg-white p-10 text-center shadow-sm">
+      <i data-lucide="loader-circle" class="mx-auto h-7 w-7 animate-spin text-[#e85d4a]"></i>
+      <p data-template-id="loading-text" class="canva-text mt-4 font-semibold text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 600; font-style: normal; font-size: 16px;">Preparing your next logo matchup…</p>
+     </div>
+     <div id="vote-empty" class="hidden rounded-[2rem] border border-dashed border-[#cbbde8] bg-[#f8f4ff] p-10 text-center">
+      <i data-lucide="layers-2" class="mx-auto h-9 w-9 text-[#79649e]"></i>
+      <h2 data-template-id="empty-title" class="canva-text mt-4 font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">This test needs two logo concepts.</h2>
+      <p data-template-id="empty-copy" class="canva-text mx-auto mt-2 max-w-lg leading-7 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">The test owner can unlock Owner access to add or restore logo concepts before inviting voters.</p>
+     </div>
+     <div id="vote-complete" class="hidden rounded-[2rem] border border-[#f0b7ac] bg-[#fbe1dc] p-10 text-center">
+      <i data-lucide="circle-check-big" class="mx-auto h-10 w-10 text-[#b53c2d]"></i>
+      <h2 data-template-id="complete-title" class="canva-text mt-4 font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">Thanks for voting.</h2>
+      <p data-template-id="complete-copy" class="canva-text mx-auto mt-2 max-w-lg leading-7 text-[#70423c]" style="color: rgb(112, 66, 60); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">You have completed this set of comparisons. The results will be shared by the test owner.</p>
+     </div>
+     <div id="matchup-wrap" class="hidden">
+      <div class="grid gap-5 md:grid-cols-[1fr_auto_1fr] md:items-center">
+       <article id="logo-a-card" class="match-card rounded-[2rem] border border-[#e7ded5] bg-white p-5 shadow-[0_8px_26px_rgba(55,40,31,.08)] sm:p-7">
+        <div id="logo-a-art" class="logo-stage mb-6"></div>
+        <p data-template-id="concept-one-label" class="canva-text text-xs font-bold uppercase tracking-[.14em] text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.08rem;">Logo concept one</p>
+        <h2 id="logo-a-name" class="mt-2 text-2xl font-extrabold tracking-tight"></h2>
+        <p id="logo-a-version" class="mt-1 text-sm font-semibold text-[#706963]"></p><button id="choose-a-button" data-template-id="choose-a-button" class="canva-button mt-6 w-full rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(255, 255, 255); color: rgb(37, 33, 31); border: 1px solid rgb(231, 222, 213); font-weight: 700; font-style: normal; font-size: 16px;" type="button" onclick="castVote(0)">Choose this logo</button>
+       </article>
+       <div class="versus mx-auto grid h-11 w-11 place-items-center rounded-full border border-[#e7ded5] bg-[#fffaf4] text-xs font-extrabold text-[#706963]" aria-hidden="true">
+        VS
+       </div>
+       <article id="logo-b-card" class="match-card rounded-[2rem] border border-[#e7ded5] bg-white p-5 shadow-[0_8px_26px_rgba(55,40,31,.08)] sm:p-7">
+        <div id="logo-b-art" class="logo-stage mb-6"></div>
+        <p data-template-id="concept-two-label" class="canva-text text-xs font-bold uppercase tracking-[.14em] text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.08rem;">Logo concept two</p>
+        <h2 id="logo-b-name" class="mt-2 text-2xl font-extrabold tracking-tight"></h2>
+        <p id="logo-b-version" class="mt-1 text-sm font-semibold text-[#706963]"></p><button id="choose-b-button" data-template-id="choose-b-button" class="canva-button mt-6 w-full rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(255, 255, 255); color: rgb(37, 33, 31); border: 1px solid rgb(231, 222, 213); font-weight: 700; font-style: normal; font-size: 16px;" type="button" onclick="castVote(1)">Choose this logo</button>
+       </article>
+      </div>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+       <button id="skip-button" data-template-id="skip-button" class="canva-button rounded-xl px-4 py-2.5 font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(232, 221, 251); color: rgb(37, 33, 31); font-weight: 600; font-style: normal; font-size: 16px;" type="button" onclick="skipMatchup()">Skip this matchup</button> <span id="vote-count" class="rounded-full bg-white px-3 py-2 text-sm font-bold text-[#706963] shadow-sm">0 votes collected</span>
+      </div>
+     </div>
+    </section>
+    <section id="owner-view" class="view-panel hidden" aria-labelledby="owner-title">
+     <div class="max-w-3xl">
+      <p data-template-id="owner-eyebrow" class="canva-text mb-3 text-sm font-bold uppercase tracking-[.14em]" style="color: rgb(232, 93, 74); font-weight: 700; font-style: normal; font-size: 13px; letter-spacing: 0.08rem;">Private test controls</p>
+      <h1 id="owner-title" data-template-id="owner-title-text" class="canva-text font-extrabold tracking-tight" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 32px;">Owner access</h1>
+      <p data-template-id="owner-copy" class="canva-text mt-3 max-w-2xl leading-7 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">Manage the logo set, publish the test, and keep the voting experience focused for participants.</p>
+     </div>
+     <div id="owner-lock" class="mt-8 max-w-xl rounded-[2rem] border border-[#e7ded5] bg-white p-6 shadow-[0_8px_26px_rgba(55,40,31,.07)] sm:p-8">
+      <div class="flex items-start gap-4">
+       <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#e8ddfb] text-[#55447f]"><i data-lucide="lock-keyhole"></i></span>
+       <div>
+        <h2 data-template-id="access-title" class="canva-text font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">Unlock owner controls</h2>
+        <p data-template-id="access-copy" class="canva-text mt-2 leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;"></p>
+       </div>
+      </div>
+      <form id="access-form" class="mt-6 flex flex-col gap-3 sm:flex-row">
+       <div class="grow">
+        <label data-template-id="passcode-label" class="canva-text mb-2 block text-sm font-bold" for="owner-passcode" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Prototype passcode</label> <input id="owner-passcode" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text" autocomplete="off">
+       </div><button id="access-button" data-template-id="access-button" class="canva-button self-end rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" style="background: rgb(232, 93, 74); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;" type="submit">Unlock</button>
+      </form>
+      <p id="access-status" class="mt-4 hidden rounded-xl px-4 py-3 text-sm font-semibold" aria-live="polite"></p>
+     </div>
+     <div id="owner-tools" class="hidden">
+      <div data-template-id="owner-note" class="canva-banner mt-8 rounded-2xl px-5 py-4" style="background: rgb(232, 221, 251);">
+       <p data-template-id="owner-note-text" class="canva-text leading-6" style="color: rgb(37, 33, 31); font-weight: 600; font-style: normal; font-size: 16px; line-height: 1.5;">Only the test owner can add or change logo concepts. Public voters can only compare two concepts and submit anonymous feedback.</p>
+      </div>
+      <div class="mt-8 grid gap-6 lg:grid-cols-[.88fr_1.12fr]">
+       <section class="rounded-[2rem] border border-[#e7ded5] bg-white p-5 shadow-[0_8px_26px_rgba(55,40,31,.07)] sm:p-7" aria-labelledby="add-title">
+        <h2 id="add-title" data-template-id="add-title-text" class="canva-text font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">Add logo concept</h2>
+        <p data-template-id="add-copy" class="canva-text mt-2 text-sm leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.5;">Add a clear concept name, version, and a short artwork mark for this prototype.</p>
+        <form id="concept-form" class="mt-6 space-y-4">
+         <div>
+          <label data-template-id="concept-name-label" class="canva-text mb-2 block text-sm font-bold" for="concept-name" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Concept name</label> <input id="concept-name" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text">
+         </div>
+         <div>
+          <label data-template-id="concept-version-label" class="canva-text mb-2 block text-sm font-bold" for="concept-version" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Version</label> <input id="concept-version" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text">
+         </div>
+         <div>
+          <label data-template-id="artwork-label" class="canva-text mb-2 block text-sm font-bold" for="concept-artwork" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Artwork text</label> <input id="concept-artwork" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text">
+         </div>
+         <div>
+          <label data-template-id="image-url-label" class="canva-text mb-2 block text-sm font-bold" for="concept-image-url" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Image URL placeholder</label> <input id="concept-image-url" data-template-id="image-url-input" class="canva-input w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="url" placeholder="https://example.com/logo.png" style="font-weight: 400; font-style: normal; font-size: 16px;">
+         </div>
+         <div>
+          <label data-template-id="file-label" class="canva-text mb-2 block text-sm font-bold" for="concept-file" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">File upload placeholder</label> <input id="concept-file" class="block w-full rounded-xl border border-dashed border-[#cbbde8] bg-[#f8f4ff] p-3 text-sm text-[#706963] file:mr-4 file:rounded-lg file:border-0 file:bg-[#e8ddfb] file:px-3 file:py-2 file:font-semibold file:text-[#25211f]" type="file" accept="image/*">
+         </div>
+         <p data-template-id="artwork-helper" class="canva-text text-sm leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.5;">The URL and upload fields are prototype placeholders. Concept artwork is represented by the editable artwork text so no personal images are collected.</p><button id="add-concept-button" data-template-id="add-concept-button" class="canva-button w-full rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(37, 33, 31); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;" type="submit">Add logo concept</button>
+        </form>
+       </section>
+       <section class="rounded-[2rem] border border-[#e7ded5] bg-white p-5 shadow-[0_8px_26px_rgba(55,40,31,.07)] sm:p-7" aria-labelledby="list-title">
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+         <div>
+          <h2 id="list-title" data-template-id="list-title-text" class="canva-text font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">Your logo concepts</h2>
+          <p data-template-id="list-copy" class="canva-text mt-1 text-sm text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 14px;">Rename, remove, or reorder concepts before publishing.</p>
+         </div><span id="owner-concept-count" class="rounded-full bg-[#e8ddfb] px-3 py-1.5 text-sm font-bold">4 concepts</span>
+        </div>
+        <div id="owner-list" class="mt-5 space-y-3"></div>
+       </section>
+      </div>
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+       <button id="publish-button" data-template-id="publish-button" class="canva-button rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(232, 93, 74); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;" type="button" onclick="publishTest()">Publish test</button> <button data-template-id="copy-button" class="canva-button rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" style="background: rgb(232, 221, 251); color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;" type="button" onclick="copyTestLink()">Copy test link</button> <span id="publish-status" class="text-sm font-semibold text-[#706963]" aria-live="polite"></span>
+      </div>
+     </div>
+    </section>
+    <section id="results-view" class="view-panel hidden" aria-labelledby="results-title">
+     <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+      <div>
+       <p data-template-id="results-eyebrow" class="canva-text mb-3 text-sm font-bold uppercase tracking-[.14em]" style="color: rgb(232, 93, 74); font-weight: 700; font-style: normal; font-size: 13px; letter-spacing: 0.08rem;">Private owner view</p>
+       <h1 id="results-title" data-template-id="results-title-text" class="canva-text font-extrabold tracking-tight" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 32px;">Owner results</h1>
+       <p data-template-id="results-copy" class="canva-text mt-3 max-w-2xl leading-7 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">Scan wins, losses, win rate, and comparison volume without overstating an early signal.</p>
+      </div><span id="results-vote-count" class="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#706963] shadow-sm">0 votes collected</span>
+     </div>
+     <div id="results-lock" class="mt-8 max-w-xl rounded-[2rem] border border-[#e7ded5] bg-white p-8 text-center shadow-sm">
+      <i data-lucide="shield-check" class="mx-auto h-10 w-10 text-[#79649e]"></i>
+      <h2 data-template-id="results-lock-title" class="canva-text mt-4 font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">Owner results are private.</h2>
+      <p data-template-id="results-lock-copy" class="canva-text mx-auto mt-2 max-w-md leading-7 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">Unlock Owner access to review saved votes and the current comparison totals.</p>
+     </div>
+     <div id="results-content" class="hidden">
+      <div id="results-summary" class="mt-8 rounded-[2rem] p-6 sm:p-8"></div>
+      <section class="mt-6 rounded-[2rem] border border-[#e7ded5] bg-white p-5 shadow-[0_8px_26px_rgba(55,40,31,.07)] sm:p-7" aria-labelledby="ranking-title">
+       <h2 id="ranking-title" data-template-id="ranking-title-text" class="canva-text font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">Concept comparison totals</h2>
+       <div id="ranking-list" class="mt-5 space-y-4" aria-live="polite"></div>
+      </section>
+     </div>
+    </section>
+   </main>
+   <footer class="border-t border-[#e7ded5] px-5 py-6 text-center sm:px-8">
+    <p data-template-id="footer-copy" class="canva-text text-sm text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 14px;">©All rights reserved by Darien Corporation</p>
+   </footer>
+  </div>
+  <script>
+    const TEST_ID = "logo-duel-prototype";
+    const SESSION_TARGET = 12;
+    const palette = [
+      ["#f8d5ca", "#9a392d"],
+      ["#ddd5f6", "#55447f"],
+      ["#d7eadc", "#28634b"],
+      ["#f8e7ad", "#826017"],
+      ["#d8e8ef", "#216276"],
+      ["#f4d7e7", "#8e315a"]
+    ];
+
+    let logos = [
+      { id: "ember", name: "Ember", version: "Version 01", mark: "E/", colorIndex: 0 },
+      { id: "northline", name: "Northline", version: "Version 02", mark: "N.", colorIndex: 1 },
+      { id: "grove", name: "Grove", version: "Version 03", mark: "G+", colorIndex: 2 },
+      { id: "signal", name: "Signal", version: "Version 04", mark: "S≋", colorIndex: 3 }
+    ];
+    let records = [];
+    let currentMatch = [];
+    let comparisonsInSession = 0;
+    let ownerUnlocked = false;
+    let saving = false;
+    let stateRecord = null;
+    let testState = "draft";
+
+    function esc(value) {
+      return String(value || "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+      })[char]);
+    }
+
+    function makeId(name) {
+      return "logo-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "") + "-" + Date.now();
+    }
+
+    function pairKey(a, b) {
+      return [a, b].sort().join("__");
+    }
+
+    function voteRecords() {
+      return records.filter(record => record.record_type === "vote" && !record.skipped);
+    }
+
+    function encounterRecords() {
+      return records.filter(record => record.record_type === "vote" || record.record_type === "skip");
+    }
+
+    function allPairs() {
+      const pairs = [];
+      logos.forEach((logo, index) => {
+        logos.slice(index + 1).forEach(opponent => pairs.push([logo, opponent]));
+      });
+      return pairs;
+    }
+
+    function showView(view) {
+      ["vote", "owner", "results"].forEach(name => {
+        document.getElementById(name + "-view").classList.toggle("hidden", name !== view);
+        const button = document.getElementById(name + "-nav");
+        button.classList.toggle("active", name === view);
+        button.setAttribute("aria-current", name === view ? "page" : "false");
+      });
+      if (view === "vote") renderVote();
+      if (view === "owner") renderOwner();
+      if (view === "results") renderResults();
+    }
+
+    function logoColors(logo) {
+      return palette[logo.colorIndex % palette.length];
+    }
+
+    function renderArtwork(element, logo) {
+      const colors = logoColors(logo);
+      element.style.background = colors[0];
+      element.style.color = colors[1];
+      element.innerHTML = '<span class="logo-mark">' + esc(logo.mark || logo.name.slice(0, 2).toUpperCase()) + "</span>";
+    }
+
+    function chooseNextPair() {
+      const pairs = allPairs();
+      if (!pairs.length) return [];
+
+      const counts = {};
+      encounterRecords().forEach(record => {
+        const key = pairKey(record.logo_id, record.opponent_logo_id);
+        counts[key] = (counts[key] || 0) + 1;
+      });
+
+      const unseen = pairs.filter(pair => !counts[pairKey(pair[0].id, pair[1].id)]);
+      const source = unseen.length ? unseen : pairs;
+      const lowestCount = Math.min(...source.map(pair => counts[pairKey(pair[0].id, pair[1].id)] || 0));
+      const balanced = source.filter(pair => (counts[pairKey(pair[0].id, pair[1].id)] || 0) === lowestCount);
+      const selected = balanced[Math.floor(Math.random() * balanced.length)];
+      return Math.random() > .5 ? selected : [selected[1], selected[0]];
+    }
+
+    function updateProgress() {
+      const current = Math.min(comparisonsInSession + 1, SESSION_TARGET);
+      document.getElementById("progress-text").textContent = "Comparison " + current + " of " + SESSION_TARGET;
+      document.getElementById("progress-fill").style.width = Math.min(comparisonsInSession / SESSION_TARGET * 100, 100) + "%";
+      const totalVotes = voteRecords().length;
+      const label = totalVotes + " vote" + (totalVotes === 1 ? "" : "s") + " collected";
+      document.getElementById("vote-count").textContent = label;
+      document.getElementById("results-vote-count").textContent = label;
+    }
+
+    function renderVote() {
+      updateProgress();
+      const loading = document.getElementById("vote-loading");
+      const empty = document.getElementById("vote-empty");
+      const complete = document.getElementById("vote-complete");
+      const matchup = document.getElementById("matchup-wrap");
+
+      loading.classList.add("hidden");
+      empty.classList.toggle("hidden", logos.length >= 2);
+      complete.classList.toggle("hidden", comparisonsInSession < SESSION_TARGET);
+      matchup.classList.toggle("hidden", logos.length < 2 || comparisonsInSession >= SESSION_TARGET);
+
+      if (logos.length < 2 || comparisonsInSession >= SESSION_TARGET) return;
+      if (!currentMatch.length) currentMatch = chooseNextPair();
+      if (!currentMatch.length) return;
+
+      currentMatch.forEach((logo, index) => {
+        const key = index === 0 ? "a" : "b";
+        renderArtwork(document.getElementById("logo-" + key + "-art"), logo);
+        document.getElementById("logo-" + key + "-name").textContent = logo.name;
+        document.getElementById("logo-" + key + "-version").textContent = logo.version;
+        document.getElementById("logo-" + key + "-card").classList.remove("is-selected", "is-dimmed");
+      });
+    }
+
+    function setVotingDisabled(disabled) {
+      document.getElementById("choose-a-button").disabled = disabled;
+      document.getElementById("choose-b-button").disabled = disabled;
+      document.getElementById("skip-button").disabled = disabled;
+    }
+
+    function showVoteNotice(message) {
+      const notice = document.getElementById("vote-notice");
+      document.getElementById("vote-notice-text").textContent = message;
+      notice.classList.remove("hidden");
+      notice.classList.remove("toast");
+      void notice.offsetWidth;
+      notice.classList.add("toast");
+    }
+
+    function baseRecord(type) {
+      return {
+        record_type: type,
+        test_id: TEST_ID,
+        test_name: "Logo Duel",
+        logo_id: "",
+        logo_name: "",
+        logo_version: "",
+        opponent_logo_id: "",
+        opponent_logo_name: "",
+        opponent_logo_version: "",
+        selected_logo_id: "",
+        selected_logo_name: "",
+        skipped: false,
+        concepts_json: "",
+        test_state: "",
+        created_at: new Date().toISOString()
+      };
+    }
+
+    async function castVote(index) {
+      if (saving || !currentMatch.length) return;
+      if (records.length >= 999) {
+        showVoteNotice("The Canva Sheet has reached its 999-record limit. The owner can remove older records before collecting more feedback.");
+        return;
+      }
+
+      saving = true;
+      setVotingDisabled(true);
+      const selected = currentMatch[index];
+      const otherIndex = index === 0 ? 1 : 0;
+      document.getElementById("logo-" + (index === 0 ? "a" : "b") + "-card").classList.add("is-selected");
+      document.getElementById("logo-" + (otherIndex === 0 ? "a" : "b") + "-card").classList.add("is-dimmed");
+
+      const record = baseRecord("vote");
+      record.logo_id = currentMatch[0].id;
+      record.logo_name = currentMatch[0].name;
+      record.logo_version = currentMatch[0].version;
+      record.opponent_logo_id = currentMatch[1].id;
+      record.opponent_logo_name = currentMatch[1].name;
+      record.opponent_logo_version = currentMatch[1].version;
+      record.selected_logo_id = selected.id;
+      record.selected_logo_name = selected.name;
+
+      const result = await window.dataSdk.create(record);
+      saving = false;
+      setVotingDisabled(false);
+
+      if (result.isOk) {
+        comparisonsInSession++;
+        currentMatch = [];
+        showVoteNotice("Vote saved. Thanks for your feedback.");
+        renderVote();
+      } else {
+        showVoteNotice("We couldn't save that vote. Please try again.");
+      }
+    }
+
+    async function skipMatchup() {
+      if (saving || !currentMatch.length) return;
+      if (records.length >= 999) {
+        showVoteNotice("The Canva Sheet has reached its 999-record limit. The owner can remove older records before collecting more feedback.");
+        return;
+      }
+
+      saving = true;
+      setVotingDisabled(true);
+      const record = baseRecord("skip");
+      record.logo_id = currentMatch[0].id;
+      record.logo_name = currentMatch[0].name;
+      record.logo_version = currentMatch[0].version;
+      record.opponent_logo_id = currentMatch[1].id;
+      record.opponent_logo_name = currentMatch[1].name;
+      record.opponent_logo_version = currentMatch[1].version;
+      record.skipped = true;
+
+      const result = await window.dataSdk.create(record);
+      saving = false;
+      setVotingDisabled(false);
+
+      if (result.isOk) {
+        comparisonsInSession++;
+        currentMatch = [];
+        showVoteNotice("Matchup skipped. Loading another balanced pair.");
+        renderVote();
+      } else {
+        showVoteNotice("We couldn't save that skip. Please try again.");
+      }
+    }
+
+    function renderOwner() {
+      document.getElementById("owner-lock").classList.toggle("hidden", ownerUnlocked);
+      document.getElementById("owner-tools").classList.toggle("hidden", !ownerUnlocked);
+      if (!ownerUnlocked) return;
+
+      document.getElementById("owner-concept-count").textContent = logos.length + " concept" + (logos.length === 1 ? "" : "s");
+      const list = document.getElementById("owner-list");
+      list.innerHTML = logos.map((logo, index) => {
+        const colors = logoColors(logo);
+        return `
+          <article class="owner-item rounded-2xl border border-[#e7ded5] bg-[#fffaf4] p-4" data-logo-id="${esc(logo.id)}">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+              <div class="grid h-16 w-16 shrink-0 place-items-center rounded-2xl text-2xl font-extrabold tracking-tighter" style="background:${colors[0]};color:${colors[1]};">${esc(logo.mark)}</div>
+              <div class="min-w-0 grow">
+                <label class="sr-only" for="name-${esc(logo.id)}">Concept name</label>
+                <input id="name-${esc(logo.id)}" class="w-full rounded-lg border border-[#e7ded5] bg-white px-3 py-2 font-bold outline-none focus:ring-4 focus:ring-[#e8ddfb]" value="${esc(logo.name)}">
+                <label class="sr-only" for="version-${esc(logo.id)}">Version</label>
+                <input id="version-${esc(logo.id)}" class="mt-2 w-full rounded-lg border border-[#e7ded5] bg-white px-3 py-2 text-sm font-semibold text-[#706963] outline-none focus:ring-4 focus:ring-[#e8ddfb]" value="${esc(logo.version)}">
+              </div>
+              <div class="flex flex-wrap gap-2 sm:w-32 sm:justify-end">
+                <button class="rounded-lg border border-[#e7ded5] bg-white p-2 text-[#25211f] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:opacity-35" type="button" aria-label="Move ${esc(logo.name)} earlier" onclick="moveConcept('${esc(logo.id)}',-1)" ${index === 0 ? "disabled" : ""}><i data-lucide="arrow-up"></i></button>
+                <button class="rounded-lg border border-[#e7ded5] bg-white p-2 text-[#25211f] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:opacity-35" type="button" aria-label="Move ${esc(logo.name)} later" onclick="moveConcept('${esc(logo.id)}',1)" ${index === logos.length - 1 ? "disabled" : ""}><i data-lucide="arrow-down"></i></button>
+                <button class="rounded-lg border border-[#e7ded5] bg-white p-2 text-[#25211f] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" aria-label="Save ${esc(logo.name)} name and version" onclick="renameConcept('${esc(logo.id)}')"><i data-lucide="save"></i></button>
+                <button class="rounded-lg border border-[#f0b7ac] bg-[#fff5f2] p-2 text-[#b53c2d] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" aria-label="Remove ${esc(logo.name)}" onclick="removeConcept('${esc(logo.id)}', this)"><i data-lucide="trash-2"></i></button>
+              </div>
+            </div>
+          </article>`;
+      }).join("");
+      lucide.createIcons();
+      document.getElementById("publish-status").textContent = testState === "published" ? "Test published" : "Draft test";
+    }
+
+    async function saveConceptState() {
+      if (saving) return false;
+      if (records.length >= 999 && !stateRecord) {
+        document.getElementById("publish-status").textContent = "The Canva Sheet record limit has been reached.";
+        return false;
+      }
+
+      saving = true;
+      const publishButton = document.getElementById("publish-button");
+      const addButton = document.getElementById("add-concept-button");
+      publishButton.disabled = true;
+      addButton.disabled = true;
+
+      const state = baseRecord("test_state");
+      state.concepts_json = JSON.stringify(logos);
+      state.test_state = testState;
+
+      let result;
+      if (stateRecord && stateRecord.__backendId) {
+        result = await window.dataSdk.update({ ...state, __backendId: stateRecord.__backendId });
+      } else {
+        result = await window.dataSdk.create(state);
+      }
+
+      saving = false;
+      publishButton.disabled = false;
+      addButton.disabled = false;
+
+      if (!result.isOk) {
+        document.getElementById("publish-status").textContent = "Changes could not be saved. Please try again.";
+        return false;
+      }
+      document.getElementById("publish-status").textContent = "Changes saved";
+      return true;
+    }
+
+    async function addConcept(event) {
+      event.preventDefault();
+      const name = document.getElementById("concept-name").value.trim();
+      const version = document.getElementById("concept-version").value.trim();
+      const artwork = document.getElementById("concept-artwork").value.trim();
+
+      if (!name) {
+        document.getElementById("publish-status").textContent = "Add a concept name before saving.";
+        return;
+      }
+
+      logos.push({
+        id: makeId(name),
+        name: name,
+        version: version || "New version",
+        mark: artwork || name.slice(0, 2).toUpperCase(),
+        colorIndex: logos.length % palette.length
+      });
+      const saved = await saveConceptState();
+      if (!saved) logos.pop();
+      event.target.reset();
+      currentMatch = [];
+      renderOwner();
+      renderVote();
+    }
+
+    async function renameConcept(id) {
+      const item = logos.find(logo => logo.id === id);
+      if (!item) return;
+      const nameInput = document.getElementById("name-" + id);
+      const versionInput = document.getElementById("version-" + id);
+      const oldName = item.name;
+      const oldVersion = item.version;
+      item.name = nameInput.value.trim() || oldName;
+      item.version = versionInput.value.trim() || oldVersion;
+      const saved = await saveConceptState();
+      if (!saved) {
+        item.name = oldName;
+        item.version = oldVersion;
+      }
+      currentMatch = [];
+      renderOwner();
+      renderVote();
+    }
+
+    async function moveConcept(id, direction) {
+      const index = logos.findIndex(logo => logo.id === id);
+      const target = index + direction;
+      if (index < 0 || target < 0 || target >= logos.length) return;
+      [logos[index], logos[target]] = [logos[target], logos[index]];
+      const saved = await saveConceptState();
+      if (!saved) [logos[index], logos[target]] = [logos[target], logos[index]];
+      currentMatch = [];
+      renderOwner();
+      renderVote();
+    }
+
+    async function removeConcept(id, button) {
+      if (logos.length <= 2) {
+        document.getElementById("publish-status").textContent = "Keep at least two concepts available for public voting.";
+        return;
+      }
+      if (!button.dataset.confirm) {
+        button.dataset.confirm = "true";
+        button.innerHTML = '<i data-lucide="circle-alert"></i>';
+        button.setAttribute("aria-label", "Confirm remove concept");
+        button.title = "Click again to remove";
+        lucide.createIcons();
+        setTimeout(() => {
+          if (button.isConnected) {
+            delete button.dataset.confirm;
+            button.innerHTML = '<i data-lucide="trash-2"></i>';
+            button.setAttribute("aria-label", "Remove concept");
+            button.title = "";
+            lucide.createIcons();
+          }
+        }, 2500);
+        return;
+      }
+
+      const index = logos.findIndex(logo => logo.id === id);
+      const removed = logos.splice(index, 1)[0];
+      const saved = await saveConceptState();
+      if (!saved) logos.splice(index, 0, removed);
+      currentMatch = [];
+      renderOwner();
+      renderVote();
+    }
+
+    async function publishTest() {
+      testState = "published";
+      const saved = await saveConceptState();
+      if (saved) {
+        document.getElementById("publish-status").textContent = "Test published and ready to share.";
+      }
+    }
+
+    async function copyTestLink() {
+      const status = document.getElementById("publish-status");
+      const text = window.location.href;
+      try {
+        await navigator.clipboard.writeText(text);
+        status.textContent = "Test link copied.";
+      } catch (error) {
+        const helper = document.createElement("textarea");
+        helper.value = text;
+        helper.style.position = "fixed";
+        helper.style.opacity = "0";
+        document.body.appendChild(helper);
+        helper.select();
+        document.execCommand("copy");
+        helper.remove();
+        status.textContent = "Test link copied.";
+      }
+    }
+
+    function statsForResults() {
+      const stats = Object.fromEntries(logos.map(logo => [logo.id, {
+        logo: logo, wins: 0, losses: 0, total: 0
+      }]));
+
+      voteRecords().forEach(vote => {
+        const winner = stats[vote.selected_logo_id];
+        const loserId = vote.selected_logo_id === vote.logo_id ? vote.opponent_logo_id : vote.logo_id;
+        const loser = stats[loserId];
+        if (!winner || !loser) return;
+        winner.wins++;
+        winner.total++;
+        loser.losses++;
+        loser.total++;
+      });
+
+      return Object.values(stats).sort((a, b) => {
+        const aRate = a.total ? a.wins / a.total : 0;
+        const bRate = b.total ? b.wins / b.total : 0;
+        return bRate - aRate || b.total - a.total;
+      });
+    }
+
+    function renderResults() {
+      updateProgress();
+      document.getElementById("results-lock").classList.toggle("hidden", ownerUnlocked);
+      document.getElementById("results-content").classList.toggle("hidden", !ownerUnlocked);
+      if (!ownerUnlocked) return;
+
+      const votes = voteRecords();
+      const stats = statsForResults();
+      const enough = votes.length >= 8;
+      const summary = document.getElementById("results-summary");
+
+      summary.style.background = enough ? "#fbe1dc" : "#e8ddfb";
+      summary.innerHTML = enough
+        ? '<p class="text-sm font-bold uppercase tracking-[.14em] text-[#9d382b]">Early results</p><h2 class="mt-2 text-3xl font-extrabold">Patterns are emerging.</h2><p class="mt-2 max-w-2xl leading-7">These lightweight totals show the current direction. Continue collecting independent feedback before making a final identity decision.</p>'
+        : '<p class="text-sm font-bold uppercase tracking-[.14em] text-[#57447f]">More votes needed</p><h2 class="mt-2 text-3xl font-extrabold">Keep collecting feedback.</h2><p class="mt-2 max-w-2xl leading-7">Logo Duel will not declare a winner while the response set is still small. Share the published test with agreed participants to build a clearer signal.</p>';
+
+      document.getElementById("ranking-list").innerHTML = stats.map((entry, index) => {
+        const rate = entry.total ? Math.round(entry.wins / entry.total * 100) : 0;
+        const colors = logoColors(entry.logo);
+        return `
+          <article class="rounded-2xl bg-[#fffaf4] p-4">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex min-w-0 items-center gap-3">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl text-base font-extrabold" style="background:${colors[0]};color:${colors[1]};">${esc(entry.logo.mark)}</span>
+                <div class="min-w-0">
+                  <h3 class="truncate font-extrabold">${index + 1}. ${esc(entry.logo.name)}</h3>
+                  <p class="mt-1 text-sm font-semibold text-[#706963]">${esc(entry.logo.version)} · ${entry.wins} wins · ${entry.losses} losses</p>
+                </div>
+              </div>
+              <div class="shrink-0 text-right">
+                <p class="text-lg font-extrabold">${entry.total ? rate + "%" : "—"}</p>
+                <p class="text-xs font-semibold text-[#706963]">${entry.total} comparisons</p>
+              </div>
+            </div>
+            <div class="mt-3 h-2 overflow-hidden rounded-full bg-[#efe8e0]">
+              <div class="result-bar h-full rounded-full bg-[#e85d4a]" style="width:${entry.total ? Math.max(rate, 4) : 0}%"></div>
+            </div>
+          </article>`;
+      }).join("");
+    }
+
+    document.getElementById("access-form").addEventListener("submit", event => {
+      event.preventDefault();
+      const passcode = document.getElementById("owner-passcode").value.trim().toLowerCase();
+      const status = document.getElementById("access-status");
+      status.classList.remove("hidden");
+
+      if (passcode === "dcduel") {
+        ownerUnlocked = true;
+        status.textContent = "Owner access unlocked.";
+        status.style.background = "#e8ddfb";
+        status.style.color = "#25211f";
+        renderOwner();
+      } else {
+        status.textContent = "That passcode does not unlock Owner access.";
+        status.style.background = "#fbe1dc";
+        status.style.color = "#9d382b";
+      }
+    });
+
+    document.getElementById("concept-form").addEventListener("submit", addConcept);
+
+    const dataHandler = {
+      onDataChanged(data) {
+        records = data;
+        const stateRows = data
+          .filter(record => record.record_type === "test_state" && record.concepts_json)
+          .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+        if (stateRows.length) {
+          const latest = stateRows[0];
+          stateRecord = latest;
+          testState = latest.test_state || "draft";
+          try {
+            const parsed = JSON.parse(latest.concepts_json);
+            if (Array.isArray(parsed) && parsed.length) {
+              logos = parsed.map((logo, index) => ({
+                id: String(logo.id || makeId(logo.name || "concept")),
+                name: String(logo.name || "Untitled concept"),
+                version: String(logo.version || "New version"),
+                mark: String(logo.mark || String(logo.name || "L").slice(0, 2).toUpperCase()),
+                colorIndex: Number.isFinite(Number(logo.colorIndex)) ? Number(logo.colorIndex) : index % palette.length
+              }));
+            }
+          } catch (error) {
+            /* Keep the safe fictional starter concepts if a saved state cannot be read. */
+          }
+        }
+
+        renderVote();
+        if (ownerUnlocked) renderOwner();
+        if (!document.getElementById("results-view").classList.contains("hidden")) renderResults();
+      }
+    };
+
+    async function initialise() {
+      lucide.createIcons();
+      renderVote();
+      const result = await window.dataSdk.init(dataHandler);
+      document.getElementById("vote-loading").classList.add("hidden");
+      if (!result.isOk) {
+        showVoteNotice("Votes could not connect to the Canva Sheet. Please try again.");
+        renderVote();
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", initialise);
+  </script>
+ 
+</body></html>

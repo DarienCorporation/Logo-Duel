@@ -77,10 +77,8 @@
  <body data-template-id="__page-root" style="background: rgb(255, 250, 244);">
   <div class="app-shell grain">
    <header data-template-id="site-header" class="canva-header border-b px-5 py-4 sm:px-8" style="background:#fffaf4;border-color:#e7ded5;">
-    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4">
-     <button type="button" class="flex items-center gap-3 rounded-xl text-left focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" onclick="showView('vote')"> <img data-template-id="logo-duel-brand-mark" class="canva-image brand-mark" loading="eager" src="./Logo_Duel_logo.jpeg" alt="Logo Duel logo"> <span> <span data-template-id="wordmark" class="canva-text block font-extrabold tracking-tight" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 20px;">Logo Duel</span> <span data-template-id="tagline" class="canva-text block text-xs text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 12px;">A focused logo vote</span> </span> </button>
-     <nav aria-label="Primary navigation" class="flex flex-wrap justify-end gap-3 sm:gap-5">
-      <button id="vote-nav" data-template-id="vote-nav-label" class="canva-button nav-link active rounded py-2 text-sm font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" onclick="showView('vote')" style="color: rgb(37, 33, 31); font-weight: 600; font-style: normal; font-size: 16px;">Vote</button> <button id="owner-nav" data-template-id="owner-nav-label" class="canva-button nav-link rounded py-2 text-sm font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" onclick="showView('owner')" style="color: rgb(112, 105, 99); font-weight: 600; font-style: normal; font-size: 16px;">Owner access</button> <button id="results-nav" data-template-id="results-nav-label" class="canva-button nav-link rounded py-2 text-sm font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" onclick="showView('results')" style="color: rgb(112, 105, 99); font-weight: 600; font-style: normal; font-size: 16px;">Owner results</button>
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4"><button type="button" class="flex items-center gap-3 rounded-xl text-left focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" onclick="showView('vote')"> <img data-template-id="logo-duel-brand-mark" class="canva-image brand-mark" loading="eager" src="canva://MAHUymkbd_0/1" alt="Logo Duel logo"> <span> <span data-template-id="wordmark" class="canva-text block font-extrabold tracking-tight" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 20px;">Logo Duel</span> <span data-template-id="tagline" class="canva-text block text-xs text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 12px;">A focused logo vote</span> </span> </button>
+     <nav aria-label="Primary navigation" class="flex flex-wrap justify-end gap-3 sm:gap-5"><button id="vote-nav" data-template-id="vote-nav-label" class="canva-button nav-link active rounded py-2 text-sm font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" onclick="showView('vote')" style="color: rgb(37, 33, 31); font-weight: 600; font-style: normal; font-size: 16px;">Vote</button> <button id="owner-nav" data-template-id="owner-nav-label" class="canva-button nav-link rounded py-2 text-sm font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" onclick="showView('owner')" style="color: rgb(112, 105, 99); font-weight: 600; font-style: normal; font-size: 16px;">Owner access</button> <button id="results-nav" data-template-id="results-nav-label" class="canva-button nav-link rounded py-2 text-sm font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" type="button" onclick="showView('results')" style="color: rgb(112, 105, 99); font-weight: 600; font-style: normal; font-size: 16px;">Owner results</button>
      </nav>
     </div>
    </header>
@@ -93,8 +91,7 @@
        <p data-template-id="vote-copy" class="canva-text mt-3 max-w-2xl leading-7 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">Choose the concept that feels clearer and more memorable.</p>
       </div>
       <div class="min-w-[205px] rounded-2xl border border-[#e7ded5] bg-white px-4 py-3 shadow-sm">
-       <div class="flex justify-between gap-4 text-xs font-bold uppercase tracking-[.1em] text-[#706963]">
-        <span data-template-id="progress-label" class="canva-text" style="color: rgb(112, 105, 99); font-weight: 700; font-style: normal; font-size: 12px;">Your progress</span> <span id="progress-text" aria-live="polite">Comparison 1 of 12</span>
+       <div class="flex justify-between gap-4 text-xs font-bold uppercase tracking-[.1em] text-[#706963]"><span data-template-id="progress-label" class="canva-text" style="color: rgb(112, 105, 99); font-weight: 700; font-style: normal; font-size: 12px;">Your progress</span> <span id="progress-text" aria-live="polite">Comparison 1 of 12</span>
        </div>
        <div class="mt-2 h-2 overflow-hidden rounded-full bg-[#efe8e0]">
         <div id="progress-fill" class="result-bar h-full rounded-full bg-[#e85d4a]" style="width:0%"></div>
@@ -107,17 +104,14 @@
      <div id="vote-notice" class="toast mb-5 hidden rounded-2xl border border-[#d7caec] bg-[#f4effd] px-5 py-4" aria-live="polite">
       <p id="vote-notice-text" class="font-semibold"></p>
      </div>
-     <div id="vote-loading" class="rounded-[2rem] border border-[#e7ded5] bg-white p-10 text-center shadow-sm">
-      <i data-lucide="loader-circle" class="mx-auto h-7 w-7 animate-spin text-[#e85d4a]"></i>
+     <div id="vote-loading" class="rounded-[2rem] border border-[#e7ded5] bg-white p-10 text-center shadow-sm"><i data-lucide="loader-circle" class="mx-auto h-7 w-7 animate-spin text-[#e85d4a]"></i>
       <p data-template-id="loading-text" class="canva-text mt-4 font-semibold text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 600; font-style: normal; font-size: 16px;">Preparing your next logo matchup…</p>
      </div>
-     <div id="vote-empty" class="hidden rounded-[2rem] border border-dashed border-[#cbbde8] bg-[#f8f4ff] p-10 text-center">
-      <i data-lucide="layers-2" class="mx-auto h-9 w-9 text-[#79649e]"></i>
+     <div id="vote-empty" class="hidden rounded-[2rem] border border-dashed border-[#cbbde8] bg-[#f8f4ff] p-10 text-center"><i data-lucide="layers-2" class="mx-auto h-9 w-9 text-[#79649e]"></i>
       <h2 data-template-id="empty-title" class="canva-text mt-4 font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">This test needs two logo concepts.</h2>
       <p data-template-id="empty-copy" class="canva-text mx-auto mt-2 max-w-lg leading-7 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">The test owner can unlock Owner access to add or restore logo concepts before inviting voters.</p>
      </div>
-     <div id="vote-complete" class="hidden rounded-[2rem] border border-[#f0b7ac] bg-[#fbe1dc] p-10 text-center">
-      <i data-lucide="circle-check-big" class="mx-auto h-10 w-10 text-[#b53c2d]"></i>
+     <div id="vote-complete" class="hidden rounded-[2rem] border border-[#f0b7ac] bg-[#fbe1dc] p-10 text-center"><i data-lucide="circle-check-big" class="mx-auto h-10 w-10 text-[#b53c2d]"></i>
       <h2 data-template-id="complete-title" class="canva-text mt-4 font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">Thanks for voting.</h2>
       <p data-template-id="complete-copy" class="canva-text mx-auto mt-2 max-w-lg leading-7 text-[#70423c]" style="color: rgb(112, 66, 60); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">You have completed this set of comparisons. The results will be shared by the test owner.</p>
      </div>
@@ -139,8 +133,7 @@
         <p id="logo-b-version" class="mt-1 text-sm font-semibold text-[#706963]"></p><button id="choose-b-button" data-template-id="choose-b-button" class="canva-button mt-6 w-full rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(255, 255, 255); color: rgb(37, 33, 31); border: 1px solid rgb(231, 222, 213); font-weight: 700; font-style: normal; font-size: 16px;" type="button" onclick="castVote(1)">Choose this logo</button>
        </article>
       </div>
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
-       <button id="skip-button" data-template-id="skip-button" class="canva-button rounded-xl px-4 py-2.5 font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(232, 221, 251); color: rgb(37, 33, 31); font-weight: 600; font-style: normal; font-size: 16px;" type="button" onclick="skipMatchup()">Skip this matchup</button> <span id="vote-count" class="rounded-full bg-white px-3 py-2 text-sm font-bold text-[#706963] shadow-sm">0 votes collected</span>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-4"><button id="skip-button" data-template-id="skip-button" class="canva-button rounded-xl px-4 py-2.5 font-semibold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(232, 221, 251); color: rgb(37, 33, 31); font-weight: 600; font-style: normal; font-size: 16px;" type="button" onclick="skipMatchup()">Skip this matchup</button> <span id="vote-count" class="rounded-full bg-white px-3 py-2 text-sm font-bold text-[#706963] shadow-sm">0 votes collected</span>
       </div>
      </div>
     </section>
@@ -151,16 +144,14 @@
       <p data-template-id="owner-copy" class="canva-text mt-3 max-w-2xl leading-7 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">Manage the logo set, publish the test, and keep the voting experience focused for participants.</p>
      </div>
      <div id="owner-lock" class="mt-8 max-w-xl rounded-[2rem] border border-[#e7ded5] bg-white p-6 shadow-[0_8px_26px_rgba(55,40,31,.07)] sm:p-8">
-      <div class="flex items-start gap-4">
-       <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#e8ddfb] text-[#55447f]"><i data-lucide="lock-keyhole"></i></span>
+      <div class="flex items-start gap-4"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#e8ddfb] text-[#55447f]"><i data-lucide="lock-keyhole"></i></span>
        <div>
         <h2 data-template-id="access-title" class="canva-text font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">Unlock owner controls</h2>
-        <p data-template-id="access-copy" class="canva-text mt-2 leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;"></p>
+        <p data-template-id="access-copy" class="canva-text mt-2 leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;">Enter the prototype passcode to manage concepts and review private results.</p>
        </div>
       </div>
       <form id="access-form" class="mt-6 flex flex-col gap-3 sm:flex-row">
-       <div class="grow">
-        <label data-template-id="passcode-label" class="canva-text mb-2 block text-sm font-bold" for="owner-passcode" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Prototype passcode</label> <input id="owner-passcode" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text" autocomplete="off">
+       <div class="grow"><label data-template-id="passcode-label" class="canva-text mb-2 block text-sm font-bold" for="owner-passcode" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Prototype passcode</label> <input id="owner-passcode" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text" autocomplete="off">
        </div><button id="access-button" data-template-id="access-button" class="canva-button self-end rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" style="background: rgb(232, 93, 74); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;" type="submit">Unlock</button>
       </form>
       <p id="access-status" class="mt-4 hidden rounded-xl px-4 py-3 text-sm font-semibold" aria-live="polite"></p>
@@ -169,27 +160,41 @@
       <div data-template-id="owner-note" class="canva-banner mt-8 rounded-2xl px-5 py-4" style="background: rgb(232, 221, 251);">
        <p data-template-id="owner-note-text" class="canva-text leading-6" style="color: rgb(37, 33, 31); font-weight: 600; font-style: normal; font-size: 16px; line-height: 1.5;">Only the test owner can add or change logo concepts. Public voters can only compare two concepts and submit anonymous feedback.</p>
       </div>
+      <section data-template-id="backend-setup-panel" class="canva-panel mt-5 rounded-2xl border border-[#e7ded5] bg-white p-5 shadow-sm" aria-labelledby="backend-setup-title" style="background: rgb(255, 255, 255);">
+       <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+         <h2 id="backend-setup-title" data-template-id="backend-setup-title" class="canva-text font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 20px;">Vercel + MongoDB setup</h2>
+         <p data-template-id="backend-setup-copy" class="canva-text mt-2 max-w-3xl text-sm leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;">Deploy this app to Vercel, add the server-only variables, deploy /api routes, configure Vercel Blob or another image-storage adapter, then test the connection before publishing. The browser never receives credentials.</p>
+        </div>
+        <div class="flex shrink-0 flex-col items-start gap-2 sm:items-end">
+         <span id="backend-status" class="rounded-full bg-[#fbe1dc] px-3 py-1.5 text-sm font-bold text-[#9d382b]">Backend not connected</span> <button id="test-connection-button" data-template-id="test-connection-button" class="canva-button rounded-xl px-4 py-2 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" style="background: rgb(232, 221, 251); color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;" type="button" onclick="testBackendConnection()">Test connection</button>
+        </div>
+       </div>
+       <p data-template-id="backend-variables" class="canva-text mt-4 rounded-xl bg-[#f8f4ff] px-4 py-3 text-sm leading-6" style="color: rgb(37, 33, 31); font-weight: 600; font-style: normal; font-size: 16px; line-height: 1.5;">Required in Vercel Project Settings → Environment Variables for Development, Preview, and Production as appropriate: MONGODB_URI · MONGODB_DB · the selected image-storage provider’s server-side token</p>
+       <p data-template-id="backend-setup-steps" class="canva-text mt-3 text-sm leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.5;">Server boundary: /api/health, /api/logo-tests, /api/logo-assets, /api/votes, and /api/results. Use owner session checks for mutations, published-only public reads, anonymous rate-limited votes, server-side file validation, safe image URLs, and MongoDB collections logoTests, logoConcepts, matchups, votes, and feedback. Cache the process.env.MONGODB_URI connection for serverless reuse and return safe configuration errors only.</p>
+      </section>
       <div class="mt-8 grid gap-6 lg:grid-cols-[.88fr_1.12fr]">
        <section class="rounded-[2rem] border border-[#e7ded5] bg-white p-5 shadow-[0_8px_26px_rgba(55,40,31,.07)] sm:p-7" aria-labelledby="add-title">
         <h2 id="add-title" data-template-id="add-title-text" class="canva-text font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">Add logo concept</h2>
         <p data-template-id="add-copy" class="canva-text mt-2 text-sm leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.5;">Add a clear concept name, version, and a short artwork mark for this prototype.</p>
         <form id="concept-form" class="mt-6 space-y-4">
-         <div>
-          <label data-template-id="concept-name-label" class="canva-text mb-2 block text-sm font-bold" for="concept-name" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Concept name</label> <input id="concept-name" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text">
+         <div><label data-template-id="concept-name-label" class="canva-text mb-2 block text-sm font-bold" for="concept-name" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Concept name</label> <input id="concept-name" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text">
          </div>
-         <div>
-          <label data-template-id="concept-version-label" class="canva-text mb-2 block text-sm font-bold" for="concept-version" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Version</label> <input id="concept-version" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text">
+         <div><label data-template-id="concept-version-label" class="canva-text mb-2 block text-sm font-bold" for="concept-version" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Version</label> <input id="concept-version" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text">
          </div>
-         <div>
-          <label data-template-id="artwork-label" class="canva-text mb-2 block text-sm font-bold" for="concept-artwork" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Artwork text</label> <input id="concept-artwork" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text">
+         <div><label data-template-id="artwork-label" class="canva-text mb-2 block text-sm font-bold" for="concept-artwork" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Artwork text</label> <input id="concept-artwork" class="w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="text">
          </div>
-         <div>
-          <label data-template-id="image-url-label" class="canva-text mb-2 block text-sm font-bold" for="concept-image-url" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Image URL placeholder</label> <input id="concept-image-url" data-template-id="image-url-input" class="canva-input w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="url" placeholder="https://example.com/logo.png" style="font-weight: 400; font-style: normal; font-size: 16px;">
+         <div><label data-template-id="image-url-label" class="canva-text mb-2 block text-sm font-bold" for="concept-image-url" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Image URL placeholder</label> <input id="concept-image-url" data-template-id="image-url-input" class="canva-input w-full rounded-xl border border-[#e7ded5] bg-[#fffdf9] px-4 py-3 outline-none focus:ring-4 focus:ring-[#e8ddfb]" type="url" placeholder="https://example.com/logo.png" style="font-weight: 400; font-style: normal; font-size: 16px;">
          </div>
-         <div>
-          <label data-template-id="file-label" class="canva-text mb-2 block text-sm font-bold" for="concept-file" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">File upload placeholder</label> <input id="concept-file" class="block w-full rounded-xl border border-dashed border-[#cbbde8] bg-[#f8f4ff] p-3 text-sm text-[#706963] file:mr-4 file:rounded-lg file:border-0 file:bg-[#e8ddfb] file:px-3 file:py-2 file:font-semibold file:text-[#25211f]" type="file" accept="image/*">
+         <div><label data-template-id="file-label" class="canva-text mb-2 block text-sm font-bold" for="concept-file" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">File upload placeholder</label> <input id="concept-file" class="block w-full rounded-xl border border-dashed border-[#cbbde8] bg-[#f8f4ff] p-3 text-sm text-[#706963] file:mr-4 file:rounded-lg file:border-0 file:bg-[#e8ddfb] file:px-3 file:py-2 file:font-semibold file:text-[#25211f]" type="file" accept="image/*">
          </div>
-         <p data-template-id="artwork-helper" class="canva-text text-sm leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.5;">The URL and upload fields are prototype placeholders. Concept artwork is represented by the editable artwork text so no personal images are collected.</p><button id="add-concept-button" data-template-id="add-concept-button" class="canva-button w-full rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(37, 33, 31); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;" type="submit">Add logo concept</button>
+         <p data-template-id="artwork-helper" class="canva-text text-sm leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.5;">The URL field is retained for compatibility. Select local logo files below for owner-only preview; remote storage is not claimed until a backend is connected.</p>
+         <div data-template-id="asset-upload-panel" class="canva-panel mt-5 rounded-2xl border border-dashed border-[#cbbde8] bg-[#f8f4ff] p-4" style="background: rgb(248, 244, 255);"><label data-template-id="asset-upload-label" class="canva-text block text-sm font-bold" for="logo-assets" style="color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;">Logo image files</label> <input id="logo-assets" class="canva-input mt-2 block w-full rounded-xl border border-[#e7ded5] bg-white p-3 text-sm file:mr-4 file:rounded-lg file:border-0 file:bg-[#e8ddfb] file:px-3 file:py-2 file:font-semibold" type="file" accept=".png,.jpg,.jpeg,.svg,.webp,image/png,image/jpeg,image/svg+xml,image/webp" multiple="">
+          <p data-template-id="asset-upload-help" class="canva-text mt-2 text-sm leading-6 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.5;">PNG, JPG, JPEG, SVG, or WebP · up to 5 MB each · multiple files supported. Edit each name and version before adding.</p>
+          <div id="upload-status" class="mt-3 hidden rounded-xl px-3 py-2 text-sm font-semibold" role="status" aria-live="polite"></div>
+          <div id="asset-preview-list" class="mt-4 space-y-3"></div>
+          <p data-template-id="backend-setup-note" class="canva-text mt-4 border-t border-[#d7caec] pt-3 text-xs leading-5 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 12px; line-height: 1.5;">Backend not connected. Production requires a server-side API such as /api/logo-assets that authenticates the owner, validates uploads, stores binaries in object storage, stores metadata and votes in MongoDB, and returns safe public image URLs. Configure the MongoDB URI on the server only; never embed it in this client.</p>
+         </div><button id="add-concept-button" data-template-id="add-concept-button" class="canva-button w-full rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(37, 33, 31); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;" type="submit">Add logo concept</button>
         </form>
        </section>
        <section class="rounded-[2rem] border border-[#e7ded5] bg-white p-5 shadow-[0_8px_26px_rgba(55,40,31,.07)] sm:p-7" aria-labelledby="list-title">
@@ -202,8 +207,7 @@
         <div id="owner-list" class="mt-5 space-y-3"></div>
        </section>
       </div>
-      <div class="mt-6 flex flex-wrap items-center gap-3">
-       <button id="publish-button" data-template-id="publish-button" class="canva-button rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(232, 93, 74); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;" type="button" onclick="publishTest()">Publish test</button> <button data-template-id="copy-button" class="canva-button rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" style="background: rgb(232, 221, 251); color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;" type="button" onclick="copyTestLink()">Copy test link</button> <span id="publish-status" class="text-sm font-semibold text-[#706963]" aria-live="polite"></span>
+      <div class="mt-6 flex flex-wrap items-center gap-3"><button id="publish-button" data-template-id="publish-button" class="canva-button rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb] disabled:cursor-wait disabled:opacity-60" style="background: rgb(232, 93, 74); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;" type="button" onclick="publishTest()">Publish test</button> <button data-template-id="copy-button" class="canva-button rounded-xl px-5 py-3 font-bold focus:outline-none focus-visible:ring-4 focus-visible:ring-[#e8ddfb]" style="background: rgb(232, 221, 251); color: rgb(37, 33, 31); font-weight: 700; font-style: normal; font-size: 16px;" type="button" onclick="copyTestLink()">Copy test link</button> <span id="publish-status" class="text-sm font-semibold text-[#706963]" aria-live="polite"></span>
       </div>
      </div>
     </section>
@@ -215,8 +219,7 @@
        <p data-template-id="results-copy" class="canva-text mt-3 max-w-2xl leading-7 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">Scan wins, losses, win rate, and comparison volume without overstating an early signal.</p>
       </div><span id="results-vote-count" class="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#706963] shadow-sm">0 votes collected</span>
      </div>
-     <div id="results-lock" class="mt-8 max-w-xl rounded-[2rem] border border-[#e7ded5] bg-white p-8 text-center shadow-sm">
-      <i data-lucide="shield-check" class="mx-auto h-10 w-10 text-[#79649e]"></i>
+     <div id="results-lock" class="mt-8 max-w-xl rounded-[2rem] border border-[#e7ded5] bg-white p-8 text-center shadow-sm"><i data-lucide="shield-check" class="mx-auto h-10 w-10 text-[#79649e]"></i>
       <h2 data-template-id="results-lock-title" class="canva-text mt-4 font-extrabold" style="color: rgb(37, 33, 31); font-weight: 800; font-style: normal; font-size: 24px;">Owner results are private.</h2>
       <p data-template-id="results-lock-copy" class="canva-text mx-auto mt-2 max-w-md leading-7 text-[#706963]" style="color: rgb(112, 105, 99); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">Unlock Owner access to review saved votes and the current comparison totals.</p>
      </div>
@@ -234,6 +237,16 @@
    </footer>
   </div>
   <script>
+    // Only a public base URL may be configured in the browser; credentials stay server-side.
+    const API_BASE_URL = "";
+    const API_PATHS = {
+      health: "/api/health",
+      test: testId => "/api/logo-tests/" + encodeURIComponent(testId),
+      assets: "/api/logo-assets",
+      concepts: "/api/logo-concepts",
+      votes: "/api/votes",
+      results: testId => "/api/results/" + encodeURIComponent(testId)
+    };
     const TEST_ID = "logo-duel-prototype";
     const SESSION_TARGET = 12;
     const palette = [
@@ -258,6 +271,9 @@
     let saving = false;
     let stateRecord = null;
     let testState = "draft";
+    let localAssets = [];
+    const MAX_ASSET_BYTES = 5 * 1024 * 1024;
+    const ACCEPTED_ASSET_TYPES = ["image/png", "image/jpeg", "image/svg+xml", "image/webp"];
 
     function esc(value) {
       return String(value || "").replace(/[&<>"']/g, char => ({
@@ -301,6 +317,21 @@
       if (view === "results") renderResults();
     }
 
+    function apiUrl(path) {
+      return API_BASE_URL.replace(/\/$/, "") + path;
+    }
+
+    async function apiRequest(path, options = {}) {
+      const response = await fetch(apiUrl(path), {
+        ...options,
+        credentials: "include",
+        headers: { Accept: "application/json", ...(options.headers || {}) }
+      });
+      if (!response.ok) throw new Error("api_unavailable");
+      const type = response.headers.get("content-type") || "";
+      return type.includes("application/json") ? response.json() : null;
+    }
+
     function logoColors(logo) {
       return palette[logo.colorIndex % palette.length];
     }
@@ -309,7 +340,65 @@
       const colors = logoColors(logo);
       element.style.background = colors[0];
       element.style.color = colors[1];
-      element.innerHTML = '<span class="logo-mark">' + esc(logo.mark || logo.name.slice(0, 2).toUpperCase()) + "</span>";
+      element.innerHTML = logo.image_url
+        ? '<img src="' + esc(logo.image_url) + '" alt="" class="relative z-10 max-h-40 max-w-[82%] object-contain">'
+        : '<span class="logo-mark">' + esc(logo.mark || logo.name.slice(0, 2).toUpperCase()) + "</span>";
+    }
+
+    function renderAssetPreviews() {
+      const list = document.getElementById("asset-preview-list");
+      list.innerHTML = localAssets.map((asset, index) => `
+        <article class="flex items-center gap-3 rounded-xl border border-[#e7ded5] bg-white p-3" data-asset-index="${index}">
+          <img src="${esc(asset.url)}" alt="Preview of ${esc(asset.file.name)}" class="h-14 w-14 rounded-lg object-contain bg-[#fffaf4]">
+          <div class="min-w-0 grow">
+            <label class="sr-only" for="asset-name-${index}">Concept name for ${esc(asset.file.name)}</label>
+            <input id="asset-name-${index}" class="w-full rounded-lg border border-[#e7ded5] px-2 py-1 text-sm font-bold" value="${esc(asset.name)}">
+            <label class="sr-only" for="asset-version-${index}">Version for ${esc(asset.file.name)}</label>
+            <input id="asset-version-${index}" class="mt-1 w-full rounded-lg border border-[#e7ded5] px-2 py-1 text-xs" value="${esc(asset.version)}">
+            <p class="mt-1 truncate text-xs text-[#706963]">${esc(asset.file.name)} · ${asset.width ? asset.width + "×" + asset.height : "dimensions unavailable"}</p>
+          </div>
+          <button type="button" class="rounded-lg border border-[#f0b7ac] bg-[#fff5f2] p-2 text-[#b53c2d]" aria-label="Remove ${esc(asset.file.name)}" onclick="removeLocalAsset(${index})"><i data-lucide="trash-2"></i></button>
+        </article>`).join("");
+      lucide.createIcons();
+    }
+
+    function removeLocalAsset(index) {
+      URL.revokeObjectURL(localAssets[index].url);
+      localAssets.splice(index, 1);
+      renderAssetPreviews();
+    }
+
+    async function uploadAssetToApi(asset) {
+      const body = new FormData();
+      body.append("file", asset.file, asset.file.name);
+      body.append("test_id", TEST_ID);
+      body.append("name", asset.name);
+      body.append("version", asset.version);
+      return apiRequest(API_PATHS.assets, { method: "POST", body, headers: {} });
+    }
+
+    function handleAssetSelection(event) {
+      const status = document.getElementById("upload-status");
+      const rejected = [];
+      [...event.target.files].forEach(file => {
+        if (!ACCEPTED_ASSET_TYPES.includes(file.type) || file.size > MAX_ASSET_BYTES) { rejected.push(file.name); return; }
+        const asset = { file, url: URL.createObjectURL(file), name: file.name.replace(/\.[^.]+$/, ""), version: "Uploaded version", width: 0, height: 0 };
+        const probe = new Image();
+        probe.onload = () => { asset.width = probe.naturalWidth; asset.height = probe.naturalHeight; renderAssetPreviews(); };
+        probe.src = asset.url;
+        localAssets.push(asset);
+      });
+      status.classList.remove("hidden");
+      status.style.background = rejected.length ? "#fbe1dc" : "#e8ddfb";
+      status.textContent = rejected.length ? "Rejected: " + rejected.join(", ") + ". Use PNG, JPG, SVG, or WebP files up to 5 MB." : "Backend not connected — Local preview only — not saved remotely.";
+      renderAssetPreviews();
+    }
+
+    function syncAssetFields() {
+      localAssets.forEach((asset, index) => {
+        asset.name = document.getElementById("asset-name-" + index)?.value.trim() || asset.name;
+        asset.version = document.getElementById("asset-version-" + index)?.value.trim() || asset.version;
+      });
     }
 
     function chooseNextPair() {
@@ -369,6 +458,29 @@
       document.getElementById("choose-a-button").disabled = disabled;
       document.getElementById("choose-b-button").disabled = disabled;
       document.getElementById("skip-button").disabled = disabled;
+    }
+
+    async function testBackendConnection() {
+      const button = document.getElementById("test-connection-button");
+      const status = document.getElementById("backend-status");
+      button.disabled = true;
+      button.textContent = "Testing…";
+      status.textContent = "Checking connection…";
+      status.style.background = "#e8ddfb";
+      status.style.color = "#55447f";
+      try {
+        await apiRequest(API_PATHS.health);
+        status.textContent = "Backend connected";
+        status.style.background = "#d7eadc";
+        status.style.color = "#28634b";
+      } catch (error) {
+        status.textContent = "Backend not connected";
+        status.style.background = "#fbe1dc";
+        status.style.color = "#9d382b";
+      } finally {
+        button.disabled = false;
+        button.textContent = "Test connection";
+      }
     }
 
     function showVoteNotice(message) {
@@ -543,8 +655,17 @@
       const name = document.getElementById("concept-name").value.trim();
       const version = document.getElementById("concept-version").value.trim();
       const artwork = document.getElementById("concept-artwork").value.trim();
+      syncAssetFields();
 
-      if (!name) {
+      if (localAssets.length) {
+        localAssets.forEach(asset => logos.push({ id: makeId(asset.name), name: asset.name, version: asset.version, mark: asset.name.slice(0, 2).toUpperCase(), image_url: asset.url, colorIndex: logos.length % palette.length }));
+        localAssets = [];
+        document.getElementById("logo-assets").value = "";
+        document.getElementById("upload-status").textContent = "Concept previews added locally. Backend not connected; remote storage is not claimed.";
+        renderAssetPreviews();
+      }
+
+      if (!name && !logos.length) {
         document.getElementById("publish-status").textContent = "Add a concept name before saving.";
         return;
       }
@@ -724,7 +845,7 @@
       const status = document.getElementById("access-status");
       status.classList.remove("hidden");
 
-      if (passcode === "dcduel") {
+      if (passcode === "duel") {
         ownerUnlocked = true;
         status.textContent = "Owner access unlocked.";
         status.style.background = "#e8ddfb";
@@ -738,6 +859,7 @@
     });
 
     document.getElementById("concept-form").addEventListener("submit", addConcept);
+    document.getElementById("logo-assets").addEventListener("change", handleAssetSelection);
 
     const dataHandler = {
       onDataChanged(data) {

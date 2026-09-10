@@ -51,14 +51,7 @@ External libraries are loaded through CDN resources where applicable.
 
 Project Structure
 
-Logo_Duel/
-├── index.html
-├── Logo_Duel_logo.jpeg
-└── README.md
-
-Running Locally
-
-Because Logo Duel is currently a static HTML application, it can be opened directly in a browser.
+Logo Duel is currently a static HTML application, it can be opened directly in a browser.
 
 For the best experience, however, serve the project through a local web server rather than opening the HTML file directly.
 
